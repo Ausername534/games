@@ -9,11 +9,11 @@ pl2 = randomnumber
 
 
 # the total of the computer
-totalpl2 = 0 
+totalpl2 = 0
 
 # the total of the player
-totalpl1 = 0 
-while totalpl2 < 3 and totalpl1 < 3:
+totalpl1 = 0
+while totalpl2 < 3 or totalpl1 < 3:
     #the player can pick rock, paper, scissor and it will be named pl1
     pl1 = input("choose one,[rock, paper, scissor]")
     
@@ -21,25 +21,42 @@ while totalpl2 < 3 and totalpl1 < 3:
     if pl2 == 1 and pl1 == "rock":
         print("tie")
         totalpl1 = +0
-        totalpl2 = 
-    if pl2 == 2 and pl1 == "scissor":
+        totalpl2 = +0
+    elif pl2 == 2 and pl1 == "scissor":
         print("tie")
+        totalpl1 = +0
+        totalpl2 = +0
     if pl2 == 3 and pl1 == "scissor":
         print("tie")
+        totalpl1 = +0
+        totalpl2 = +0
         
     # when the computer picks rock but player picks paper or scissor which can end up with the player winning and the pl2 winning
     if pl2 == 1 and pl1 == "paper":
         print("pl1 wins")
+        totalpl1 = +1
+        totalpl2 = +0
     if pl2 == 1 and pl1 == "scissor":
         print("pl2 wins")
+        totalpl1 = +0
+        totalpl2 = +1
     # when the computer picks paper but the player picks rock or scissor which can end up with pl2 winning and pl1 winning
     if pl2 == 2 and pl1 == "rock":
         print("pl2 wins")
+        totalpl1 = +0
+        totalpl2 = +1
     if pl2 == 2 and pl1 == "scissor":
         print("pl1 wins")
+        totalpl1 = +1
+        totalpl2 = +0
     # when the computer picks scissor but the player picks rock or paper which can end up with pl1 winning and pl2 winning
     if pl2 == 3 and pl1 == "rock":
         print("pl1 wins")
+        totalpl1 = +1
+        totalpl2 = +0
     if pl2 == 3 and pl1 == "paper":
         print("pl2 wins")
-        
+        totalpl1 = +0
+        totalpl2 = +0
+else:
+    print("not vaild input")
