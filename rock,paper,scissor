@@ -1,0 +1,41 @@
+import random
+
+randomnumber = random.randint(1, 3)
+#this would be a number between 1 and 3 but it will be random.
+
+# for the computer it will be name pl2 and 1 will be rock, 2 will be paper, 3 will be scissor.
+pl2 = randomnumber
+#input from the user in where they can pick rock, paper, scissor.
+
+
+# the total of the computer
+totalpl2 = 0 
+
+# the total of the player
+totalpl1 = 0 
+while totalpl2 < 3 and totalpl1 < 3:
+    #the player can pick rock, paper, scissor and it will be named pl1
+    pl1 = input("choose one,[rock, paper, scissor]")
+    
+    #this will be if the computer and the player choose the same thing which ends with a tie.
+    if pl2 == 1 and pl1 == "rock":
+        print("tie")
+    if pl2 == 2 and pl1 == "scissor":
+        print("tie")
+    if pl2 == 3 and pl1 == "scissor":
+        print("tie")
+    # when the computer picks rock but player picks paper or scissor which can end up with the player winning and the pl2 winning
+    if pl2 == 1 and pl1 == "paper":
+        print("pl1 wins")
+    if pl2 == 1 and pl1 == "scissor":
+        print("pl2 wins")
+    # when the computer picks paper but the player picks rock or scissor which can end up with pl2 winning and pl1 winning
+    if pl2 == 2 and pl1 == "rock":
+        print("pl2 wins")
+    if pl2 == 2 and pl1 == "scissor":
+        print("pl1 wins")
+    # when the computer picks scissor but the player picks rock or paper which can end up with pl1 winning and pl2 winning
+    if pl2 == 3 and pl1 == "rock":
+        print("pl1 wins")
+    if pl2 == 3 and pl1 == "paper":
+        print("pl2 wins")
